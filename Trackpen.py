@@ -93,7 +93,7 @@ class SystemTouchpad:
                     print(rubber)
 
 
-def if __name__ == '__main__':
+if __name__ == '__main__':
     try:
         pad    = SystemTouchpad()
         screen = Pen(pad.get_abs_values())
