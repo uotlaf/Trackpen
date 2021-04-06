@@ -9,6 +9,10 @@ Trackpen is a program that allows you to use the touchpad as a stylus, even if t
 - Mouse emulation mode
 - Argument Parsing
 
+## Recomendations
+- Use a mouse for buttons
+- You can use a capacitive stylus or your finger
+
 ## Requirements
 - Linux
 - A touchpad
