@@ -90,7 +90,6 @@ class SystemTouchpad:
                             touchscreen.write(event.type, ecodes.BTN_TOOL_RUBBER, 0)
                             touchscreen.write(event.type, ecodes.BTN_TOOL_PEN, 1)
                             rubber = 0
-                    print(rubber)
 
 
 if __name__ == '__main__':
