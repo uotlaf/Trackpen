@@ -61,6 +61,10 @@ class SystemTouchpad:
             except KeyError:
                 pass
 
+        if not len(touchpads):
+            print("No touchpad detected")
+            exit(1)
+
         return touchpads[0]
 
     def get_abs_values(self) -> tuple:
