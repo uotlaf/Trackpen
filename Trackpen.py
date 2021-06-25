@@ -61,10 +61,6 @@ class SystemTouchpad:
             except KeyError:
                 pass
 
-        if not len(touchpads):
-            print("No touchpad detected")
-            exit(1)
-
         return touchpads[0]
 
     def get_abs_values(self) -> tuple:
@@ -95,14 +91,19 @@ class SystemTouchpad:
                             touchscreen.write(event.type, ecodes.BTN_TOOL_PEN, 1)
                             rubber = 0
 
+def logger(logMsg):
+    # This function is to add the prefix [LOG]: in messages
+    logStr = "[LOG]: "
+    print(logStr + logMsg)
 
 if __name__ == '__main__':
     try:
         pad    = SystemTouchpad()
         screen = Pen(pad.get_abs_values())
-        print("Disabling touchpad")
+        print("when you want to exit, just press Ctrl+C ! \n")
+        logger("Disabling touchpad")
         pad.disable_tp_xinput()
-        pad.loop(screen) 
+        pad.loop(screen)
     except KeyboardInterrupt:
         # Restore xinput touchpad on exit
         print('Restoring')
