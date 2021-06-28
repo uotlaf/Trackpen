@@ -98,6 +98,21 @@ def logger(logMsg):
 
 if __name__ == '__main__':
     try:
+        art = '''
+|  ________                             __                                      |
+| |        \                           |  \                                     |
+|  \$$$$$$$$______   ______    _______ | $$   __   ______    ______   _______   |
+|    | $$  /      \ |      \  /       \| $$  /  \ /      \  /      \ |       \  |
+|    | $$ |  $$$$$$\ \$$$$$$\|  $$$$$$$| $$_/  $$|  $$$$$$\|  $$$$$$\| $$$$$$$\ |
+|    | $$ | $$   \$$/      $$| $$      | $$   $$ | $$  | $$| $$    $$| $$  | $$ |
+|    | $$ | $$     |  $$$$$$$| $$_____ | $$$$$$\ | $$__/ $$| $$$$$$$$| $$  | $$ |
+|    | $$ | $$      \$$    $$ \$$     \| $$  \$$\| $$    $$ \$$     \| $$  | $$ |
+|     \$$  \$$       \$$$$$$$  \$$$$$$$ \$$   \$$| $$$$$$$   \$$$$$$$ \$$   \$$ |
+|                                                | $$                           |
+|                                                | $$                           |
+|                                                 \$$                           |
+                                                '''
+        print(art)
         pad    = SystemTouchpad()
         screen = Pen(pad.get_abs_values())
         print("when you want to exit, just press Ctrl+C ! \n")
@@ -106,5 +121,5 @@ if __name__ == '__main__':
         pad.loop(screen)
     except KeyboardInterrupt:
         # Restore xinput touchpad on exit
-        print('Restoring')
+        logger("Restoring")
         pad.enable_tp_xinput()
