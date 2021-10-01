@@ -23,8 +23,9 @@ Trackpen is a program that allows you to use the touchpad as a stylus, even if t
 ## How to install
 ### Debian/Ubuntu
 ````bash
-sudo apt install python-evdev
+sudo apt install python3-evdev
 git clone https://github.com/uotlaf/Trackpen.git
+sudo usermod -a -G input "your_username"
 cd Trackpen
 ./Trackpen.py or python3 Trackpen.py
 ````
@@ -32,6 +33,7 @@ cd Trackpen
 ````bash
 sudo pacman -S python-evdev
 git clone https://github.com/uotlaf/Trackpen.git
+sudo usermod -a -G input "your_username"
 cd Trackpen
 ./Trackpen.py or python3 Trackpen.py
 ````
